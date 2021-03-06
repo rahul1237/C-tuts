@@ -93,23 +93,23 @@ int main(){
         cout<<"value of result is:"<<result<<endl;
 
 // CONTROL STATEMENTS
-        int marks;
-        cout<<"enter your marks: ";
-        cin>>marks;
+        int mark;
+        cout<<"enter your mark: ";
+        cin>>mark;
 
     // if-else statement
-        if(marks>0 && marks<50){
+        if(mark>0 && mark<50){
             cout<<"you are fail in the examination"<<endl;
-        }else if(marks>=50 && marks<=75){
+        }else if(mark>=50 && mark<=75){
             cout<<"you are in the second division"<<endl;
-        }else if(marks>75 && marks<=100){
+        }else if(mark>75 && mark<=100){
             cout<<"you are in the first division"<<endl;
         }else{
-            cout<<"enter the valid marks"<<endl;
+            cout<<"enter the valid mark"<<endl;
         }
 
     // switch case statement
-        switch (marks)
+        switch (mark)
         {
         case 49:
             cout<<"fail"<<endl;
@@ -191,6 +191,50 @@ int main(){
     // cout<<"------"<<endl<<endl;
 
 // ARRAYS
+    int marks[]={5,2,85,963};
+    int maths_marks[4];
+    maths_marks[0]=52;
+    maths_marks[1]=512;
+    maths_marks[2]=524;
+    maths_marks[3]=544;
+
+    cout<<"these are marks"<<endl;
+    cout<<marks[0]<<endl;
+    cout<<marks[1]<<endl;
+    cout<<marks[2]<<endl;
+    marks[3]=20;
+    cout<<marks[3]<<endl;
+    
+    cout<<"these are maths marks"<<endl;
+    cout<<maths_marks[0]<<endl;
+    cout<<maths_marks[1]<<endl;
+    cout<<maths_marks[2]<<endl;
+    cout<<maths_marks[3]<<endl;
+
+    cout<<"array using loops!"<<endl;
+
+    for(int i=0;i<(sizeof(maths_marks)/sizeof(maths_marks[0]));i++){
+        cout<<maths_marks[i]<<" ";
+    }
+
+    cout<<endl<<endl;
+
+    cout<<"using while loop!"<<endl;
+
+    int j=0;
+    while(j<(sizeof(maths_marks)/sizeof(maths_marks[0]))){
+        cout<<maths_marks[j]<<" ";
+        j++;
+    }
+
+    cout<<endl;
+    cout<<"size of array is: "<<sizeof(maths_marks)<<endl;
+
+    // IN ARRAYS THE NAME OF ARRAYS STORES THE ADDRESS OF THE ARRAY
+    // And Using The Pointers On The Name Of The Array To Get The Elements! 
+    cout<<*(maths_marks+2)<<endl;
+
+
 
     return 0;
 }
